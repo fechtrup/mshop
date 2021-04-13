@@ -1,0 +1,16 @@
+.offer {
+    display: flex;
+}
+
+.text {
+    padding: 0 0 0 1rem;
+    font-size: 1.2rem;
+}
+
+.text a {
+    position: absolute;
+    color: var(--telekom);
+    text-decoration: none;
+    margin: 0.45rem 0 0 0;
+}
+

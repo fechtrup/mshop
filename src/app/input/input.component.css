@@ -1,0 +1,49 @@
+.inputField {
+    margin: 0 0 1rem 0;
+}
+
+label {
+    font-size: 1rem;
+    margin: 0 3.5rem 0 0;
+    display: inline-block;
+    width: 9.15rem;
+}
+
+input {
+    width: 24.5rem;
+    height: 2.5rem;
+    background-color: var(--grey);
+    border-radius: 0.25rem;
+    border: 0.05rem  solid var(--darkgrey);
+}
+
+input:hover {
+    background-color: var(--greyhover);
+    border: 0.05rem solid var(--darkgreyhover);
+}
+
+input:focus {
+    background-color: #ffffff;
+    border: 0.05rem solid var(--telekom);
+    outline: none;
+}
+
+
+input[type="text"] {
+    padding: 0 0 0 1.25rem;
+}
+
+.error {
+    background-color: var(--error);
+    border: none;
+}
+
+.error:focus {
+    background-color: #ffffff;
+    border: 0.05rem solid var(--error);
+}
+
+.error:hover {
+    background-color: var(--errorhover);
+    border: none;
+}

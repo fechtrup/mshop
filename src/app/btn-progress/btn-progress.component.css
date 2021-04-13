@@ -1,0 +1,21 @@
+.circle {
+    position:fixed;
+    bottom: 1.75rem;
+    right: 1.75rem;
+    width: 5.25rem;
+    height: 5.25rem;
+    border-radius: 50%;
+    box-shadow: 0px 3px 6px var(--shadow);
+    z-index: 100;
+    background-color: #fff;
+}
+
+p { 
+    position: absolute;
+    top: 50%;
+    left:50%;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--telekom);
+    transform: translate(-50%, -50%);
+}

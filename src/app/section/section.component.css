@@ -1,0 +1,28 @@
+section {
+    position: relative;
+    width:100vw;
+    height: auto;
+    min-height:17.5rem;
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap:0px;
+    grid-row-gap: -50px;
+    align-items:end;
+    border-bottom: 1.75rem solid var(--grey);
+    justify-content: flex-end;
+    margin: 2.5rem 0 0 0;
+}
+
+.content {
+    margin: 0 0 1.75rem 3.5rem;
+}
+
+.pages {
+    position:relative;
+    margin: 1rem 0 0 1rem;
+}
+
+app-offer-page {
+    padding: 0 1rem 0 0;
+}
