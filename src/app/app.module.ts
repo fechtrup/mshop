@@ -15,6 +15,7 @@ import { InputComponent } from './input/input.component';
 import { BtnProgressComponent } from './btn-progress/btn-progress.component';
 import { PageComponent } from './page/page.component';
 import { OfferSiteComponent } from './offer-site/offer-site.component';
+import { LabelComponent } from './label/label.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { OfferSiteComponent } from './offer-site/offer-site.component';
     BtnProgressComponent,
     PageComponent,
     OfferSiteComponent,
+    LabelComponent,
   ],
   imports: [
     BrowserModule

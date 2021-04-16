@@ -596,7 +596,7 @@
         },
         {
             "name": "InputComponent",
-            "id": "component-InputComponent-e3156f0bf53462c92100d50825ac51a7",
+            "id": "component-InputComponent-6f8fb492a394539fe02446d19ab9cc79",
             "file": "src/app/input/input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -614,9 +614,9 @@
             "viewProviders": [],
             "inputsClass": [
                 {
-                    "name": "backgroundColor",
+                    "name": "small",
                     "line": 11,
-                    "type": "string"
+                    "type": ""
                 }
             ],
             "outputsClass": [],
@@ -636,11 +636,11 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-input',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.css']\n})\nexport class InputComponent implements OnInit {\n\n  @Input()\n  backgroundColor: string;\n\n  constructor() { \n\n  }\n\n  ngOnInit(): void {  \n  }\n}\n\n",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-input',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.css']\n})\nexport class InputComponent implements OnInit {\n  \n  @Input()\n  small: true;\n  \n  constructor() { \n\n  }\n\n  ngOnInit(): void {  \n  }\n}\n\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".inputField {\n    margin: 0 0 1rem 0;\n}\n\nlabel {\n    font-size: 1rem;\n    margin: 0 3.5rem 0 0;\n    display: inline-block;\n    width: 9.15rem;\n}\n\ninput {\n    width: 24.5rem;\n    height: 2.5rem;\n    background-color: var(--grey);\n    border-radius: 0.25rem;\n    border: 0.05rem  solid var(--darkgrey);\n}\n\ninput:hover {\n    background-color: var(--greyhover);\n    border: 0.05rem solid var(--darkgreyhover);\n}\n\ninput:focus {\n    background-color: #ffffff;\n    border: 0.05rem solid var(--telekom);\n    outline: none;\n}\n\n\ninput[type=\"text\"] {\n    padding: 0 0 0 1.25rem;\n}\n",
+                    "data": "input {\n    width: 100%;\n    height: 2.5rem;\n    background-color: var(--grey);\n    border-radius: 0.25rem;\n    border: 0.05rem  solid var(--darkgrey);\n}\n\ninput:hover {\n    background-color: var(--greyhover);\n    border: 0.05rem solid var(--darkgreyhover);\n}\n\ninput:focus {\n    background-color: #ffffff;\n    border: 0.05rem solid var(--telekom);\n    outline: none;\n}\n\n\ninput[type=\"text\"] {\n    padding: 0 0 0 1.25rem;\n}\n\n.error {\n    background-color: var(--error);\n    border: none;\n}\n\n.error:focus {\n    background-color: #ffffff;\n    border: 0.05rem solid var(--error);\n}\n\n.error:hover {\n    background-color: var(--errorhover);\n    border: none;\n}",
                     "styleUrl": "./input.component.css"
                 }
             ],
@@ -654,7 +654,63 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "\n<div class=\"inputField\">\n    <label for=\"input\">Label</label>\n    <input type=\"text\" id=\"input\" name=\"input\" style=\"background-color: {{backgroundColor}}\" >\n</div>\n\n\n\n\n\n"
+            "templateData": "<input type=\"text\" id=\"input\" name=\"input\" [ngClass]=\"class\" />\n\n\n\n\n\n\n"
+        },
+        {
+            "name": "LabelComponent",
+            "id": "component-LabelComponent-911b682ad9c5d665bbcc1d430ed51057",
+            "file": "src/app/label/label.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-label",
+            "styleUrls": [
+                "./label.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./label.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-label',\n  templateUrl: './label.component.html',\n  styleUrls: ['./label.component.css']\n})\nexport class LabelComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n ",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "label {\n    font-size: 1rem;\n    margin: 0;\n    display: inline-block;\n}\n.error {\n    color: var(--error);\n}\n.active {\n    color: var(--telekom);\n}",
+                    "styleUrl": "./label.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<label for=\"input\" [ngClass]=\"class\">{{label}}</label>\n"
         },
         {
             "name": "LogoComponent",
@@ -882,7 +938,7 @@
         },
         {
             "name": "PageComponent",
-            "id": "component-PageComponent-cca1a8911321fa17756ce90c90de65cc",
+            "id": "component-PageComponent-8f196770333aa216860a88c0b6b221aa",
             "file": "src/stories/page.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -894,14 +950,14 @@
                 "./page.css"
             ],
             "styles": [],
-            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://www.learnstorybook.com\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Learn Storybook\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\">\n          docs\n        </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
+            "template": "<article>    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>",
             "templateUrl": [],
             "viewProviders": [],
             "inputsClass": [
                 {
                     "name": "user",
                     "defaultValue": "null",
-                    "line": 66,
+                    "line": 64,
                     "type": "unknown"
                 }
             ],
@@ -909,19 +965,19 @@
                 {
                     "name": "onCreateAccount",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 75,
+                    "line": 73,
                     "type": "EventEmitter"
                 },
                 {
                     "name": "onLogin",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 69,
+                    "line": 67,
                     "type": "EventEmitter"
                 },
                 {
                     "name": "onLogout",
                     "defaultValue": "new EventEmitter<Event>()",
-                    "line": 72,
+                    "line": 70,
                     "type": "EventEmitter"
                 }
             ],
@@ -932,7 +988,7 @@
             "description": "",
             "rawdescription": "",
             "type": "component",
-            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://www.learnstorybook.com\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Learn Storybook\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\">\n          docs\n        </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  @Input()\n  user: unknown = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\n//   <article>\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\n\n// );\n// Page.propTypes = {\n//   user: PropTypes.shape({}),\n//   onLogin: PropTypes.func.isRequired,\n//   onLogout: PropTypes.func.isRequired,\n//   onCreateAccount: PropTypes.func.isRequired,\n// };\n\n// Page.defaultProps = {\n//   user: null,\n// };\n",
+            "sourceCode": "import { Component, Input, Output, EventEmitter } from '@angular/core';\n\n@Component({\n  selector: 'storybook-page',\n  template: `<article>\n    <storybook-header\n      [user]=\"user\"\n      (onLogout)=\"onLogout.emit($event)\"\n      (onLogin)=\"onLogin.emit($event)\"\n      (onCreateAccount)=\"onCreateAccount.emit($event)\"\n    ></storybook-header>\n    <section>\n      <h2>Pages in Storybook</h2>\n      <p>\n        We recommend building UIs with a\n        <a href=\"https://componentdriven.org\" target=\"_blank\" rel=\"noopener noreferrer\">\n          <strong>component-driven</strong>\n        </a>\n        process starting with atomic components and ending with pages.\n      </p>\n      <p>\n        Render pages with mock data. This makes it easy to build and review page states without\n        needing to navigate to them in your app. Here are some handy patterns for managing page data\n        in Storybook:\n      </p>\n      <ul>\n        <li>\n          Use a higher-level connected component. Storybook helps you compose such data from the\n          \"args\" of child component stories\n        </li>\n        <li>\n          Assemble data in the page component from your services. You can mock these services out\n          using Storybook.\n        </li>\n      </ul>\n      <p>\n        Get a guided tutorial on component-driven development at\n        <a href=\"https://storybook.js.org/tutorials/\" target=\"_blank\" rel=\"noopener noreferrer\">\n          Storybook tutorials\n        </a>\n        . Read more in the\n        <a href=\"https://storybook.js.org/docs\" target=\"_blank\" rel=\"noopener noreferrer\"> docs </a>\n        .\n      </p>\n      <div class=\"tip-wrapper\">\n        <span class=\"tip\">Tip</span> Adjust the width of the canvas with the\n        <svg width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" xmlns=\"http://www.w3.org/2000/svg\">\n          <g fill=\"none\" fillRule=\"evenodd\">\n            <path\n              d=\"M1.5 5.2h4.8c.3 0 .5.2.5.4v5.1c-.1.2-.3.3-.4.3H1.4a.5.5 0 01-.5-.4V5.7c0-.3.2-.5.5-.5zm0-2.1h6.9c.3 0 .5.2.5.4v7a.5.5 0 01-1 0V4H1.5a.5.5 0 010-1zm0-2.1h9c.3 0 .5.2.5.4v9.1a.5.5 0 01-1 0V2H1.5a.5.5 0 010-1zm4.3 5.2H2V10h3.8V6.2z\"\n              id=\"a\"\n              fill=\"#999\"\n            />\n          </g>\n        </svg>\n        Viewports addon in the toolbar\n      </div>\n    </section>\n  </article>`,\n  styleUrls: ['./page.css'],\n})\nexport default class PageComponent {\n  @Input()\n  user: unknown = null;\n\n  @Output()\n  onLogin = new EventEmitter<Event>();\n\n  @Output()\n  onLogout = new EventEmitter<Event>();\n\n  @Output()\n  onCreateAccount = new EventEmitter<Event>();\n}\n\n// export const Page = ({ user, onLogin, onLogout, onCreateAccount }) => (\n//   <article>\n//     <Header user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />\n\n// );\n// Page.propTypes = {\n//   user: PropTypes.shape({}),\n//   onLogin: PropTypes.func.isRequired,\n//   onLogout: PropTypes.func.isRequired,\n//   onCreateAccount: PropTypes.func.isRequired,\n// };\n\n// Page.defaultProps = {\n//   user: null,\n// };\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1091,6 +1147,9 @@
                             "name": "InputComponent"
                         },
                         {
+                            "name": "LabelComponent"
+                        },
+                        {
                             "name": "LogoComponent"
                         },
                         {
@@ -1242,6 +1301,30 @@
                 "defaultValue": "Template.bind({})"
             },
             {
+                "name": "Label",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/label/label.component.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LabelActive",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/label/label.component.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "LabelError",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/label/label.component.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -1382,7 +1465,7 @@
                 "subtype": "variable",
                 "file": "src/stories/Button.stories.ts",
                 "type": "Story<Button>",
-                "defaultValue": "(args: Button) => ({\n  component: Button,\n  props: args,\n})"
+                "defaultValue": "(args: Button) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1390,7 +1473,7 @@
                 "subtype": "variable",
                 "file": "src/stories/Header.stories.ts",
                 "type": "Story<Header>",
-                "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
+                "defaultValue": "(args: Header) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1398,15 +1481,7 @@
                 "subtype": "variable",
                 "file": "src/stories/Page.stories.ts",
                 "type": "Story<Page>",
-                "defaultValue": "(args: Page) => ({\n  component: Page,\n  props: args,\n})"
-            },
-            {
-                "name": "Template",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/divider/divider.component.stories.ts",
-                "type": "Story<DividerComponent>",
-                "defaultValue": "(args: DividerComponent) => ({\n    component: DividerComponent,\n    props: args,\n  })"
+                "defaultValue": "(args: Page) => ({\n  props: args,\n})"
             },
             {
                 "name": "Template",
@@ -1415,6 +1490,14 @@
                 "file": "src/app/btn-progress/btn-progress.component.stories.ts",
                 "type": "Story<BtnProgressComponent>",
                 "defaultValue": "(args: BtnProgressComponent) => ({\n    component: BtnProgressComponent,\n    props: args,\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/divider/divider.component.stories.ts",
+                "type": "Story<DividerComponent>",
+                "defaultValue": "(args: DividerComponent) => ({\n    component: DividerComponent,\n    props: args,\n  })"
             },
             {
                 "name": "Template",
@@ -1452,17 +1535,25 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/logo/logo.component.stories.ts",
-                "type": "Story<LogoComponent>",
-                "defaultValue": "(args: LogoComponent) => ({\n    component: LogoComponent,\n    props: args,\n  })"
+                "file": "src/app/input/input.component.stories.ts",
+                "type": "Story<InputComponent>",
+                "defaultValue": "(args) => ({\n    component: InputComponent,\n    props: args,\n  })"
             },
             {
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/input/input.component.stories.ts",
-                "type": "Story<InputComponent>",
-                "defaultValue": "(args: InputComponent) => ({\n    component: InputComponent,\n    props: args,\n  })"
+                "file": "src/app/label/label.component.stories.ts",
+                "type": "Story<LabelComponent>",
+                "defaultValue": "(args: LabelComponent) => ({\n    component: LabelComponent,\n    props: args,\n  })"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/logo/logo.component.stories.ts",
+                "type": "Story<LogoComponent>",
+                "defaultValue": "(args: LogoComponent) => ({\n    component: LogoComponent,\n    props: args,\n  })"
             },
             {
                 "name": "Template",
@@ -1596,7 +1687,7 @@
                     "subtype": "variable",
                     "file": "src/app/input/input.component.stories.ts",
                     "type": "Story<InputComponent>",
-                    "defaultValue": "(args: InputComponent) => ({\n    component: InputComponent,\n    props: args,\n  })"
+                    "defaultValue": "(args) => ({\n    component: InputComponent,\n    props: args,\n  })"
                 }
             ],
             "src/app/header/header.component.stories.ts": [
@@ -1671,6 +1762,40 @@
                     "defaultValue": "(args: IconComponent) => ({\n    component: IconComponent,\n    props: args,\n  })"
                 }
             ],
+            "src/app/label/label.component.stories.ts": [
+                {
+                    "name": "Label",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/label/label.component.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LabelActive",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/label/label.component.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "LabelError",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/label/label.component.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/label/label.component.stories.ts",
+                    "type": "Story<LabelComponent>",
+                    "defaultValue": "(args: LabelComponent) => ({\n    component: LabelComponent,\n    props: args,\n  })"
+                }
+            ],
             "src/stories/Button.stories.ts": [
                 {
                     "name": "Large",
@@ -1710,7 +1835,7 @@
                     "subtype": "variable",
                     "file": "src/stories/Button.stories.ts",
                     "type": "Story<Button>",
-                    "defaultValue": "(args: Button) => ({\n  component: Button,\n  props: args,\n})"
+                    "defaultValue": "(args: Button) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/Header.stories.ts": [
@@ -1736,7 +1861,7 @@
                     "subtype": "variable",
                     "file": "src/stories/Header.stories.ts",
                     "type": "Story<Header>",
-                    "defaultValue": "(args: Header) => ({\n  component: Header,\n  props: args,\n})"
+                    "defaultValue": "(args: Header) => ({\n  props: args,\n})"
                 }
             ],
             "src/stories/Page.stories.ts": [
@@ -1762,7 +1887,7 @@
                     "subtype": "variable",
                     "file": "src/stories/Page.stories.ts",
                     "type": "Story<Page>",
-                    "defaultValue": "(args: Page) => ({\n  component: Page,\n  props: args,\n})"
+                    "defaultValue": "(args: Page) => ({\n  props: args,\n})"
                 }
             ],
             "src/app/logo/logo.component.stories.ts": [
@@ -2170,6 +2295,55 @@
                 "name": "InputComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/label/label.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Label",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/label/label.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LabelActive",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/label/label.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "LabelError",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/label/label.component.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/label/label.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LabelComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
